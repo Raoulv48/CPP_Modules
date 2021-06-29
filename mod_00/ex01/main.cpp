@@ -8,7 +8,7 @@ static void search_cmd(contact *lst)
 	int index;
 	std::string indexString;
 
-    for (counter = 0; counter < 8; counter++) //check for smaller then 7 else hand it in
+    for (counter = 0; counter < 8; counter++)
     {
         if (lst[counter].get_filled() == true)
         {
@@ -23,7 +23,7 @@ static void search_cmd(contact *lst)
     searchAmount = 0;
     std::cout << "Select Index: ";
     std::getline(std::cin, indexString);
-    if (indexString.size() != 1 || indexString[0] < '0' || indexString[0] > '8')
+    if (indexString.size() != 1 || indexString[0] < '0' || indexString[0] > '7')
     {
         std::cout << "Invalid Input!" << std::endl;
         return ;
@@ -73,5 +73,4 @@ int main(void)
         if (command.compare("ADD") == 0)
             add_cmd(lst);
     }
-    system("leaks phonebook");
 }
