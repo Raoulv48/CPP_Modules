@@ -1,7 +1,11 @@
-// Now, create two classes,HumanAandHumanB, 
-// that both have aWeapon,
-//  a name, andanattack()function 
-//  that displays something like
+#include "HumanA.hpp"
 
-//  NAME attacks with his WEAPON_TYPE 
+HumanA::HumanA(std::string name, Weapon& weapon): weapon(weapon)
+{
+    this->name = name;
+}
 
+void HumanA::attack()
+{
+    std::cout << "Human with the name: " << this->name << " attcks with his " << this->weapon.getType() << std::endl;
+}

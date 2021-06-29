@@ -1,22 +1,21 @@
-// ake aWeaponclass, that has atypestring, 
-// and agetTypethat returns a constreference to this string. Also has asetType
+#include "Weapon.hpp"
 
-Weapon::Weapon();
+Weapon::Weapon()
 {
-
+    this->type = "empty";
 }
 
-Weapon::Weapon(std::string)
+Weapon::Weapon(std::string type)
 {
-
+    this->type = type;
 }
 
-Weapon::getType()
+const   std::string& Weapon::getType()
 {
-    return ();
+    return (this->type);
 }
 
-Weapon::setType()
+void    Weapon::setType(std::string type)
 {
-
+    this->type = type;
 }

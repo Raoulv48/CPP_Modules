@@ -1,6 +1,5 @@
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
-
 # include <iostream>
 # include <iomanip>
 
@@ -25,16 +24,4 @@ class contact
         bool filled;
     
 };
-
-    // std::string     first name;
-    // std::string     last name;
-    // std::string     nickname;
-    // std::string     login;
-    // std::string     postal address;
-    // std::string     email address;
-    // std::string     phone number;
-    // std::string     birthday date;
-    // std::string     favoritemeal;
-    // std::string     underwear color;
-    // std::string     darkest secret;
 #endif
