@@ -23,3 +23,7 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+test: clean
+	./replace test1 test lol
+	./replace test2 Ajax AJAX

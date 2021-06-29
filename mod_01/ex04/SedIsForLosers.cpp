@@ -29,7 +29,13 @@ void    SedIsForLosers::Replace(char const *file, char const *find, char const *
         
         while (pos != std::string::npos)
         {
-            line.replace(pos, this->find.length(), this->replace);
+            if (line[pos + this->find.length()] == ' ' || line[pos + this->find.length()] == '\0')
+            {
+                std::string templine = line.substr(0, pos);
+                templine += this->replace;
+                templine += line.substr(pos + this->find.length(), line.length());
+                line = templine;
+            }
             pos = line.find(this->find, pos + this->replace.length());
         }
         file_out << line;

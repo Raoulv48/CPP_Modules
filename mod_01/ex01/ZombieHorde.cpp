@@ -27,33 +27,18 @@ static std::string *set_names(std::string *names)
 	return (names);
 }
 
-int main(void)
+Zombie* zombieHorde( int N, std::string name )
 {
-	Zombie *zombies[20];
 	std::string names[20];
 	set_names(names);
+	Zombie *zombies = new Zombie[N]();
 
-	for (int i = 0 ; i < 20; i++)
+	zombies[0].setName(name);
+	for (int i = 1 ; i < N; i++)
 	{
-		int random_variable = std::rand () % 20;
-		zombies[i] = new Zombie(names[random_variable]);
+		int random = std::rand () % 20;
+		zombies[i].setName(names[random]);
 	}
 
-	randomChump("Chumping zombie");
-	for(int i = 0; i < 5; i++)
-	{
-		zombies[i]->announce();
-		delete(zombies[i]);
-	}
-
-	randomChump("Another chumping zombie");
-	randomChump("John");
-
-	for (int i = 5; i < 20; i++)
-	{
-		zombies[i]->announce();
-		delete(zombies[i]);
-	}
-
-	// system ("leaks Zombies");
+	return (&zombies[0]);
 }
