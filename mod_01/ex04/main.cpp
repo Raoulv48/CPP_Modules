@@ -6,7 +6,7 @@ int main(int argc, char **argv)
     SedIsForLosers SED;
     if (argc != 4)
     {
-        std::cerr << "Invallid amount of arguments" << std::endl;
+        std::cout << "Invallid amount of arguments" << std::endl;
         return (1);
     }
     try
@@ -15,7 +15,7 @@ int main(int argc, char **argv)
     }
     catch(char const error)
     {
-        std::cerr << error << '\n';
+        std::cout << error << '\n';
         return (1);
     }
     return (0);
